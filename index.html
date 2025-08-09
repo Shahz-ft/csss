@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bounce Button</title>
+<style>
+
+body {
+    display: flex;
+    justify-content: center; /* horizontal center */
+    align-items: center;     /* vertical center */
+    height: 100vh;           /* full viewport height */
+    margin: 0;          /* remove default margin */
+    background-color: #f0f0f0; /* optional background */
+  }
+
+
+  /* Keyframes for bounce animation */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+
+  /* Basic button styling */
+  .bounce-button {
+    padding: 30px 75px;
+    font-size: 40px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Hover effect triggers bounce */
+  .bounce-button:hover {
+    animation: bounce 0.5s;
+    background-color: #2980b9;
+  }
+</style>
+</head>
+<body>
+
+<button class="bounce-button">Hover Me!</button>
+
+</body>
+</html>
